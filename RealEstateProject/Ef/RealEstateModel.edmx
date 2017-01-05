@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RealEstateDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="agencyInfo">
+          <Key>
+            <PropertyRef Name="agencyId" />
+          </Key>
+          <Property Name="agencyId" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="agencytitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="agencyAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="agencyPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="agencyRentalPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="agencyWebsite" Type="nvarchar" MaxLength="100" />
+          <Property Name="agencySmallImgName" Type="nvarchar" MaxLength="100" />
+          <Property Name="agencyBigImgName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="agentInfo">
+          <Key>
+            <PropertyRef Name="agentId" />
+          </Key>
+          <Property Name="agentId" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="agentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="agentPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="agentWorkingPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="agentPhotoName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="realestateImgNameOutput">
+          <Key>
+            <PropertyRef Name="realEstateImgNameId" />
+          </Key>
+          <Property Name="realEstateImgNameId" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="realEstateImgName" Type="nvarchar" MaxLength="100" />
+          <Property Name="listingsId" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="realEstateInfo">
+          <Key>
+            <PropertyRef Name="listingsId" />
+          </Key>
+          <Property Name="listingsId" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="180" />
+          <Property Name="weeklyPrice" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="region" Type="nvarchar" MaxLength="50" />
+          <Property Name="district" Type="nvarchar" MaxLength="50" />
+          <Property Name="suburb" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="100" />
+          <Property Name="bedroomCount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="carparksCount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="bathroomCount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="agencyId" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="agentId" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="RealEstateDBModelStoreContainer">
+          <EntitySet Name="agencyInfo" EntityType="Self.agencyInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="agentInfo" EntityType="Self.agentInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="realestateImgNameOutput" EntityType="Self.realestateImgNameOutput" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="realEstateInfo" EntityType="Self.realEstateInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RealEstateDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="agencyInfo">
+          <Key>
+            <PropertyRef Name="agencyId" />
+          </Key>
+          <Property Name="agencyId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="agencytitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="agencyAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="agencyPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agencyRentalPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agencyWebsite" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="agencySmallImgName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="agencyBigImgName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="agentInfo">
+          <Key>
+            <PropertyRef Name="agentId" />
+          </Key>
+          <Property Name="agentId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="agentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agentPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agentWorkingPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agentPhotoName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="realestateImgNameOutput">
+          <Key>
+            <PropertyRef Name="realEstateImgNameId" />
+          </Key>
+          <Property Name="realEstateImgNameId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="realEstateImgName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="listingsId" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="realEstateInfo">
+          <Key>
+            <PropertyRef Name="listingsId" />
+          </Key>
+          <Property Name="listingsId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="180" FixedLength="false" Unicode="true" />
+          <Property Name="weeklyPrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="bedroomCount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="carparksCount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="bathroomCount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="agencyId" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="agentId" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="RealEstateDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="agencyInfoes" EntityType="Self.agencyInfo" />
+          <EntitySet Name="agentInfoes" EntityType="Self.agentInfo" />
+          <EntitySet Name="realestateImgNameOutputs" EntityType="Self.realestateImgNameOutput" />
+          <EntitySet Name="realEstateInfoes" EntityType="Self.realEstateInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RealEstateDBModelStoreContainer" CdmEntityContainer="RealEstateDBEntities">
+          <EntitySetMapping Name="agencyInfoes">
+            <EntityTypeMapping TypeName="RealEstateDBModel.agencyInfo">
+              <MappingFragment StoreEntitySet="agencyInfo">
+                <ScalarProperty Name="agencyId" ColumnName="agencyId" />
+                <ScalarProperty Name="agencytitle" ColumnName="agencytitle" />
+                <ScalarProperty Name="agencyAddress" ColumnName="agencyAddress" />
+                <ScalarProperty Name="agencyPhone" ColumnName="agencyPhone" />
+                <ScalarProperty Name="agencyRentalPhone" ColumnName="agencyRentalPhone" />
+                <ScalarProperty Name="agencyWebsite" ColumnName="agencyWebsite" />
+                <ScalarProperty Name="agencySmallImgName" ColumnName="agencySmallImgName" />
+                <ScalarProperty Name="agencyBigImgName" ColumnName="agencyBigImgName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="agentInfoes">
+            <EntityTypeMapping TypeName="RealEstateDBModel.agentInfo">
+              <MappingFragment StoreEntitySet="agentInfo">
+                <ScalarProperty Name="agentId" ColumnName="agentId" />
+                <ScalarProperty Name="agentName" ColumnName="agentName" />
+                <ScalarProperty Name="agentPhone" ColumnName="agentPhone" />
+                <ScalarProperty Name="agentWorkingPhone" ColumnName="agentWorkingPhone" />
+                <ScalarProperty Name="agentPhotoName" ColumnName="agentPhotoName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="realestateImgNameOutputs">
+            <EntityTypeMapping TypeName="RealEstateDBModel.realestateImgNameOutput">
+              <MappingFragment StoreEntitySet="realestateImgNameOutput">
+                <ScalarProperty Name="realEstateImgNameId" ColumnName="realEstateImgNameId" />
+                <ScalarProperty Name="realEstateImgName" ColumnName="realEstateImgName" />
+                <ScalarProperty Name="listingsId" ColumnName="listingsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="realEstateInfoes">
+            <EntityTypeMapping TypeName="RealEstateDBModel.realEstateInfo">
+              <MappingFragment StoreEntitySet="realEstateInfo">
+                <ScalarProperty Name="listingsId" ColumnName="listingsId" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="weeklyPrice" ColumnName="weeklyPrice" />
+                <ScalarProperty Name="region" ColumnName="region" />
+                <ScalarProperty Name="district" ColumnName="district" />
+                <ScalarProperty Name="suburb" ColumnName="suburb" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="bedroomCount" ColumnName="bedroomCount" />
+                <ScalarProperty Name="carparksCount" ColumnName="carparksCount" />
+                <ScalarProperty Name="bathroomCount" ColumnName="bathroomCount" />
+                <ScalarProperty Name="agencyId" ColumnName="agencyId" />
+                <ScalarProperty Name="agentId" ColumnName="agentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
