@@ -45,6 +45,15 @@ C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\System.Web.Webpa
 C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\System.Web.Webpages.Razor.xml
 C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\System.Web.Helpers.xml
 C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\System.Web.Mvc.xml
-C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\obj\Debug\RealEstateProject.csprojResolveAssemblyReference.cache
 C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\obj\Debug\RealEstateProject.dll
 C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\obj\Debug\RealEstateProject.pdb
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\PagedList.dll
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\PagedList.Mvc.dll
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\PagedList.xml
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\PagedList.Mvc.xml
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\obj\Debug\RealEstateProject.csprojResolveAssemblyReference.cache
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\Newtonsoft.Json.dll
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\Newtonsoft.Json.xml
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\Antlr3.Runtime.dll
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\WebGrease.dll
+C:\Users\wmd000\Desktop\RealEstateProject\RealEstateProject\bin\Antlr3.Runtime.pdb

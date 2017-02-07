@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="RealEstateDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="agencyInfo">
+  <EntityType Name="agency">
     <Key>
       <PropertyRef Name="agencyId" />
     </Key>
@@ -13,7 +13,7 @@
     <Property Name="agencySmallImgName" Type="nvarchar" MaxLength="100" />
     <Property Name="agencyBigImgName" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <EntityType Name="agentInfo">
+  <EntityType Name="agent">
     <Key>
       <PropertyRef Name="agentId" />
     </Key>
@@ -23,7 +23,7 @@
     <Property Name="agentWorkingPhone" Type="nvarchar" MaxLength="50" />
     <Property Name="agentPhotoName" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <EntityType Name="realestateImgNameOutput">
+  <EntityType Name="realestateImgName">
     <Key>
       <PropertyRef Name="realEstateImgNameId" />
     </Key>
@@ -31,27 +31,28 @@
     <Property Name="realEstateImgName" Type="nvarchar" MaxLength="100" />
     <Property Name="listingsId" Type="numeric" Precision="18" Scale="0" />
   </EntityType>
-  <EntityType Name="realEstateInfo">
+  <EntityType Name="realEstateOutput">
     <Key>
       <PropertyRef Name="listingsId" />
     </Key>
     <Property Name="listingsId" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="title" Type="nvarchar" MaxLength="180" />
+    <Property Name="title" Type="nvarchar" MaxLength="200" />
     <Property Name="weeklyPrice" Type="numeric" Precision="18" Scale="0" />
-    <Property Name="region" Type="nvarchar" MaxLength="50" />
-    <Property Name="district" Type="nvarchar" MaxLength="50" />
-    <Property Name="suburb" Type="nvarchar" MaxLength="50" />
-    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="region" Type="nvarchar" MaxLength="100" />
+    <Property Name="district" Type="nvarchar" MaxLength="100" />
+    <Property Name="suburb" Type="nvarchar" MaxLength="100" />
+    <Property Name="address" Type="nvarchar" MaxLength="150" />
     <Property Name="bedroomCount" Type="numeric" Precision="18" Scale="0" />
     <Property Name="carparksCount" Type="numeric" Precision="18" Scale="0" />
     <Property Name="bathroomCount" Type="numeric" Precision="18" Scale="0" />
     <Property Name="agencyId" Type="numeric" Precision="18" Scale="0" />
     <Property Name="agentId" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="firstImgName" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityContainer Name="RealEstateDBModelStoreContainer">
-    <EntitySet Name="agencyInfo" EntityType="Self.agencyInfo" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="agentInfo" EntityType="Self.agentInfo" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="realestateImgNameOutput" EntityType="Self.realestateImgNameOutput" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="realEstateInfo" EntityType="Self.realEstateInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="agency" EntityType="Self.agency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="agent" EntityType="Self.agent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="realestateImgName" EntityType="Self.realestateImgName" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="realEstateOutput" EntityType="Self.realEstateOutput" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

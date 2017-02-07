@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="RealEstateDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="agencyInfo">
+  <EntityType Name="agency">
     <Key>
       <PropertyRef Name="agencyId" />
     </Key>
@@ -13,7 +13,7 @@
     <Property Name="agencySmallImgName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="agencyBigImgName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="agentInfo">
+  <EntityType Name="agent">
     <Key>
       <PropertyRef Name="agentId" />
     </Key>
@@ -23,35 +23,36 @@
     <Property Name="agentWorkingPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="agentPhotoName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="realestateImgNameOutput">
+  <EntityType Name="realestateImgName">
     <Key>
       <PropertyRef Name="realEstateImgNameId" />
     </Key>
     <Property Name="realEstateImgNameId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="realEstateImgName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="realEstateImgName1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="listingsId" Type="Decimal" Precision="18" Scale="0" />
   </EntityType>
-  <EntityType Name="realEstateInfo">
+  <EntityContainer Name="RealEstateDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="agencies" EntityType="Self.agency" />
+    <EntitySet Name="agents" EntityType="Self.agent" />
+    <EntitySet Name="realestateImgNames" EntityType="Self.realestateImgName" />
+    <EntitySet Name="realEstateOutputs" EntityType="RealEstateDBModel.realEstateOutput" />
+  </EntityContainer>
+  <EntityType Name="realEstateOutput">
     <Key>
       <PropertyRef Name="listingsId" />
     </Key>
-    <Property Name="listingsId" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="title" Type="String" MaxLength="180" FixedLength="false" Unicode="true" />
+    <Property Name="listingsId" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="weeklyPrice" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="region" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="district" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="suburb" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="bedroomCount" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="carparksCount" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="bathroomCount" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="agencyId" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="agentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="firstImgName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityContainer Name="RealEstateDBEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="agencyInfoes" EntityType="Self.agencyInfo" />
-    <EntitySet Name="agentInfoes" EntityType="Self.agentInfo" />
-    <EntitySet Name="realestateImgNameOutputs" EntityType="Self.realestateImgNameOutput" />
-    <EntitySet Name="realEstateInfoes" EntityType="Self.realEstateInfo" />
-  </EntityContainer>
 </Schema>

@@ -25,9 +25,9 @@ namespace RealEstateProject.Ef
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<agencyInfo> agencyInfoes { get; set; }
-        public virtual DbSet<agentInfo> agentInfoes { get; set; }
-        public virtual DbSet<realestateImgNameOutput> realestateImgNameOutputs { get; set; }
-        public virtual DbSet<realEstateInfo> realEstateInfoes { get; set; }
+        public virtual DbSet<agency> agencies { get; set; }
+        public virtual DbSet<agent> agents { get; set; }
+        public virtual DbSet<realestateImgName> realestateImgNames { get; set; }
+        public virtual DbSet<realEstateOutput> realEstateOutputs { get; set; }
     }
 }

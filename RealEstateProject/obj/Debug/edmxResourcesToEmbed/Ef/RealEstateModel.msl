@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="RealEstateDBModelStoreContainer" CdmEntityContainer="RealEstateDBEntities">
-    <EntitySetMapping Name="agencyInfoes">
-      <EntityTypeMapping TypeName="RealEstateDBModel.agencyInfo">
-        <MappingFragment StoreEntitySet="agencyInfo">
+    <EntitySetMapping Name="agencies">
+      <EntityTypeMapping TypeName="RealEstateDBModel.agency">
+        <MappingFragment StoreEntitySet="agency">
           <ScalarProperty Name="agencyId" ColumnName="agencyId" />
           <ScalarProperty Name="agencytitle" ColumnName="agencytitle" />
           <ScalarProperty Name="agencyAddress" ColumnName="agencyAddress" />
@@ -15,9 +15,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="agentInfoes">
-      <EntityTypeMapping TypeName="RealEstateDBModel.agentInfo">
-        <MappingFragment StoreEntitySet="agentInfo">
+    <EntitySetMapping Name="agents">
+      <EntityTypeMapping TypeName="RealEstateDBModel.agent">
+        <MappingFragment StoreEntitySet="agent">
           <ScalarProperty Name="agentId" ColumnName="agentId" />
           <ScalarProperty Name="agentName" ColumnName="agentName" />
           <ScalarProperty Name="agentPhone" ColumnName="agentPhone" />
@@ -26,30 +26,31 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="realestateImgNameOutputs">
-      <EntityTypeMapping TypeName="RealEstateDBModel.realestateImgNameOutput">
-        <MappingFragment StoreEntitySet="realestateImgNameOutput">
+    <EntitySetMapping Name="realestateImgNames">
+      <EntityTypeMapping TypeName="RealEstateDBModel.realestateImgName">
+        <MappingFragment StoreEntitySet="realestateImgName">
           <ScalarProperty Name="realEstateImgNameId" ColumnName="realEstateImgNameId" />
-          <ScalarProperty Name="realEstateImgName" ColumnName="realEstateImgName" />
+          <ScalarProperty Name="realEstateImgName1" ColumnName="realEstateImgName" />
           <ScalarProperty Name="listingsId" ColumnName="listingsId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="realEstateInfoes">
-      <EntityTypeMapping TypeName="RealEstateDBModel.realEstateInfo">
-        <MappingFragment StoreEntitySet="realEstateInfo">
-          <ScalarProperty Name="listingsId" ColumnName="listingsId" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="weeklyPrice" ColumnName="weeklyPrice" />
-          <ScalarProperty Name="region" ColumnName="region" />
-          <ScalarProperty Name="district" ColumnName="district" />
-          <ScalarProperty Name="suburb" ColumnName="suburb" />
-          <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="bedroomCount" ColumnName="bedroomCount" />
-          <ScalarProperty Name="carparksCount" ColumnName="carparksCount" />
-          <ScalarProperty Name="bathroomCount" ColumnName="bathroomCount" />
-          <ScalarProperty Name="agencyId" ColumnName="agencyId" />
+    <EntitySetMapping Name="realEstateOutputs">
+      <EntityTypeMapping TypeName="RealEstateDBModel.realEstateOutput">
+        <MappingFragment StoreEntitySet="realEstateOutput">
+          <ScalarProperty Name="firstImgName" ColumnName="firstImgName" />
           <ScalarProperty Name="agentId" ColumnName="agentId" />
+          <ScalarProperty Name="agencyId" ColumnName="agencyId" />
+          <ScalarProperty Name="bathroomCount" ColumnName="bathroomCount" />
+          <ScalarProperty Name="carparksCount" ColumnName="carparksCount" />
+          <ScalarProperty Name="bedroomCount" ColumnName="bedroomCount" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="weeklyPrice" ColumnName="weeklyPrice" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="listingsId" ColumnName="listingsId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
