@@ -97,8 +97,8 @@ namespace RealEstateProject.Controllers
 
 
 
-//                var json = JsonConvert.SerializeObject(regionList);
-//                var jsonDistrict = JsonConvert.SerializeObject(districtList);
+                var json = JsonConvert.SerializeObject(regionList);
+                var jsonDistrict = JsonConvert.SerializeObject(districtList);
                 var jsondic = JsonConvert.SerializeObject(regionDistrictDic);
                 var jsondic1 = JsonConvert.SerializeObject(districtSuburbDic);
                 //var jsonRegionList= JsonConvert.SerializeObject(regionList);
