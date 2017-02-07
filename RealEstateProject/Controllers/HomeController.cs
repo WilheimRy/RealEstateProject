@@ -44,13 +44,88 @@ namespace RealEstateProject.Controllers
             {
                 var realEstateList = db.realEstateOutputs.ToList();
 
-                var regionList = realEstateList.Select(x => x.region).Distinct().ToList();
-                
+                var regionList = realEstateList.Select(x => x.region).Distinct().OrderBy(x=>x).ToList();
+
+                var districtList= realEstateList.Select(x => x.district).Distinct().OrderBy(x => x).ToList();
+
+                var regionDistrictDic= new Dictionary<string,List<string>>();
+                var districtSuburbDic= new Dictionary<string,List<string>>();
+
+                foreach (var item in realEstateList)
+                {
+                    //add key
+                    if (!regionDistrictDic.Keys.Contains(item.region))
+                    {
+                        var list = new List<string>();
+                        regionDistrictDic.Add(item.region,list);
+                    }
+
+                    //add values
+                    foreach (var key in regionDistrictDic.Keys)
+                    {
+                        if (key.Equals(item.region))
+                        {
+                            if (!regionDistrictDic[key].Contains(item.district))
+                            {
+                                regionDistrictDic[key].Add(item.district);
+                            }
+                        }
+                    }                    
+                }
+
+                foreach (var item in realEstateList)
+                {
+                    //add key
+                    if (!districtSuburbDic.Keys.Contains(item.district))
+                    {
+                        var list = new List<string>();
+                        districtSuburbDic.Add(item.district, list);
+                    }
+
+                    //add values
+                    foreach (var key in districtSuburbDic.Keys)
+                    {
+                        if (key.Equals(item.district))
+                        {
+                            if (!districtSuburbDic[key].Contains(item.suburb))
+                            {
+                                districtSuburbDic[key].Add(item.suburb);
+                            }
+                        }
+                    }
+                }
+
+
+
+//                var json = JsonConvert.SerializeObject(regionList);
+//                var jsonDistrict = JsonConvert.SerializeObject(districtList);
+                var jsondic = JsonConvert.SerializeObject(regionDistrictDic);
+                var jsondic1 = JsonConvert.SerializeObject(districtSuburbDic);
                 //var jsonRegionList= JsonConvert.SerializeObject(regionList);
 
                 return Json(regionList);
 
             }
         }
+
+        [HttpPost]
+        //get Regions 
+        public ActionResult GetAllSuburbs(string region)
+        {
+
+            using (var db = new RealEstateDBEntities())
+            {
+                var realEstateList = db.realEstateOutputs.ToList();
+
+                var regionList = realEstateList.Select(x => x.suburb).Distinct().OrderBy(x => x).ToList();
+
+                //var jsonRegionList= JsonConvert.SerializeObject(regionList);
+
+                return Json(regionList);
+
+            }
+        }
+
+
     }
 }
