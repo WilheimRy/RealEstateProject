@@ -63,136 +63,94 @@
 
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Bedrooms</label>
+                                    <label class="col-sm-3 control-label">卧室</label>
                                     <div class="col-sm-9">
                                         <select class="form-control col-sm-12">
-                                            <option>Any</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5+</option>
+                                            <option value="0">数量</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5+</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Rent/Buy</label>
+                                    <label class="col-sm-3 control-label">浴室</label>
                                     <div class="col-sm-9">
                                         <select class="form-control col-sm-12">
-                                            <option>Any</option>
-                                            <option>Rent</option>
-                                            <option>Buy</option>
+                                            <option value="0">Any</option>
+                                            <option value="1">1+</option>
+                                            <option value="2">2+</option>
+                                            <option value="3">3+</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 @*                    price*@
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Price</label>
+                                    <label class="col-sm-3 control-label">价格</label>
                                     <div class="col-sm-9">
                                         <div class="col-sm-6 col-xs-6 no_padding_left no_margin_right">
                                             <select class="form-control col-sm-12">
-                                                <option selected="selected" value="">Min</option>
-                                                <option value="50000">50,000</option>
-                                                <option value="60000">60,000</option>
-                                                <option value="70000">70,000</option>
-                                                <option value="80000">80,000</option>
-                                                <option value="90000">90,000</option>
-                                                <option value="100000">100,000</option>
-                                                <option value="110000">110,000</option>
-                                                <option value="120000">120,000</option>
-                                                <option value="125000">125,000</option>
-                                                <option value="130000">130,000</option>
-                                                <option value="140000">140,000</option>
-                                                <option value="150000">150,000</option>
-                                                <option value="160000">160,000</option>
-                                                <option value="170000">170,000</option>
-                                                <option value="175000">175,000</option>
-                                                <option value="180000">180,000</option>
-                                                <option value="190000">190,000</option>
-                                                <option value="200000">200,000</option>
-                                                <option value="210000">210,000</option>
-                                                <option value="220000">220,000</option>
-                                                <option value="230000">230,000</option>
-                                                <option value="240000">240,000</option>
-                                                <option value="250000">250,000</option>
-                                                <option value="260000">260,000</option>
-                                                <option value="270000">270,000</option>
-                                                <option value="280000">280,000</option>
-                                                <option value="290000">290,000</option>
-                                                <option value="300000">300,000</option>
-                                                <option value="325000">325,000</option>
-                                                <option value="350000">350,000</option>
-                                                <option value="375000">375,000</option>
-                                                <option value="400000">400,000</option>
-                                                <option value="425000">425,000</option>
-                                                <option value="450000">450,000</option>
-                                                <option value="475000">475,000</option>
-                                                <option value="500000">500,000</option>
-                                                <option value="550000">550,000</option>
-                                                <option value="600000">600,000</option>
-                                                <option value="650000">650,000</option>
-                                                <option value="700000">700,000</option>
-                                                <option value="800000">800,000</option>
-                                                <option value="900000">900,000</option>
-                                                <option value="1000000">1,000,000</option>
-                                                <option value="1500000">1,500,000</option>
-                                                <option value="2000000">2,000,000</option>
-                                                <option value="3000000">3,000,000</option>
-                                                <option value="">Min</option>
+                                                <option selected="selected" value="">最低</option>
+                                                <option value="0">$0</option>
+                                                <option value="75">$75</option>
+                                                <option value="100">$100</option>
+                                                <option value="125">$125</option>
+                                                <option value="150">$150</option>
+                                                <option value="175">$175</option>
+                                                <option value="200">$200</option>
+                                                <option value="225">$225</option>
+                                                <option value="250">$250</option>
+                                                <option value="275">$275</option>
+                                                <option value="300">$300</option>
+                                                <option value="350">$350</option>
+                                                <option value="400">$400</option>
+                                                <option value="450">$450</option>
+                                                <option value="500">$500</option>
+                                                <option value="600">$600</option>
+                                                <option value="700">$700</option>
+                                                <option value="800">$800</option>
+                                                <option value="900">$900</option>
+                                                <option value="1000">$1,000</option>
+                                                <option value="1250">$1,250</option>
+                                                <option value="1500">$1,500</option>
+                                                <option value="1750">$1,750</option>
+                                                <option value="2000">$2,000</option>
+                                                <option value="2500">$2,500</option>
                                             </select>
                                         </div>
+                                        至
                                         <div class="col-sm-6 col-xs-6  no_padding_right pull-right">
                                             <select class="form-control col-sm-12 ">
-                                                <option selected="selected" value="">Max</option>
-                                                <option value="50000">50,000</option>
-                                                <option value="60000">60,000</option>
-                                                <option value="70000">70,000</option>
-                                                <option value="80000">80,000</option>
-                                                <option value="90000">90,000</option>
-                                                <option value="100000">100,000</option>
-                                                <option value="110000">110,000</option>
-                                                <option value="120000">120,000</option>
-                                                <option value="125000">125,000</option>
-                                                <option value="130000">130,000</option>
-                                                <option value="140000">140,000</option>
-                                                <option value="150000">150,000</option>
-                                                <option value="160000">160,000</option>
-                                                <option value="170000">170,000</option>
-                                                <option value="175000">175,000</option>
-                                                <option value="180000">180,000</option>
-                                                <option value="190000">190,000</option>
-                                                <option value="200000">200,000</option>
-                                                <option value="210000">210,000</option>
-                                                <option value="220000">220,000</option>
-                                                <option value="230000">230,000</option>
-                                                <option value="240000">240,000</option>
-                                                <option value="250000">250,000</option>
-                                                <option value="260000">260,000</option>
-                                                <option value="270000">270,000</option>
-                                                <option value="280000">280,000</option>
-                                                <option value="290000">290,000</option>
-                                                <option value="300000">300,000</option>
-                                                <option value="325000">325,000</option>
-                                                <option value="350000">350,000</option>
-                                                <option value="375000">375,000</option>
-                                                <option value="400000">400,000</option>
-                                                <option value="425000">425,000</option>
-                                                <option value="450000">450,000</option>
-                                                <option value="475000">475,000</option>
-                                                <option value="500000">500,000</option>
-                                                <option value="550000">550,000</option>
-                                                <option value="600000">600,000</option>
-                                                <option value="650000">650,000</option>
-                                                <option value="700000">700,000</option>
-                                                <option value="800000">800,000</option>
-                                                <option value="900000">900,000</option>
-                                                <option value="1000000">1,000,000</option>
-                                                <option value="1500000">1,500,000</option>
-                                                <option value="2000000">2,000,000</option>
-                                                <option value="3000000">3,000,000</option>
-                                                <option value="">Min</option>
+                                                <option selected="selected" value="">最高</option>
+                                                <option value="75">$75</option>
+                                                <option value="100">$100</option>
+                                                <option value="125">$125</option>
+                                                <option value="150">$150</option>
+                                                <option value="175">$175</option>
+                                                <option value="200">$200</option>
+                                                <option value="225">$225</option>
+                                                <option value="250">$250</option>
+                                                <option value="275">$275</option>
+                                                <option value="300">$300</option>
+                                                <option value="350">$350</option>
+                                                <option value="400">$400</option>
+                                                <option value="450">$450</option>
+                                                <option value="500">$500</option>
+                                                <option value="600">$600</option>
+                                                <option value="700">$700</option>
+                                                <option value="800">$800</option>
+                                                <option value="900">$900</option>
+                                                <option value="1000">$1,000</option>
+                                                <option value="1250">$1,250</option>
+                                                <option value="1500">$1,500</option>
+                                                <option value="1750">$1,750</option>
+                                                <option value="2000">$2,000</option>
+                                                <option value="2500">$2,500</option>
+                                                <option value="999999999" selected="selected">$2,500+</option>
                                             </select>
                                         </div>
                                     </div>
@@ -406,11 +364,6 @@
 
         </div>
     </div>
-
-    @*        pagination*@
-
-
-
 
     <script>
         $(function () {
