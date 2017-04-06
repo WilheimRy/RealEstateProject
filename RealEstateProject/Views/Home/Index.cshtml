@@ -17,392 +17,399 @@
     <script src="~/Scripts/jquery-1.10.2.js"></script>
 
     <div class="row">
-        <div class="col-sm-4">
-            <div class="col-sm-12">
-                @*    left top tab*@
-                <div class="row">
-                    <h4 class="col-sm-12 well" data-toggle="collapse" data-target="#criteria">改变地址和搜索条件</h4>
-                    <div class="col-sm-12  well" id="criteria" class="collapse">
+    <div class="col-sm-4">
+    <div class="col-sm-12">
+    @*    left top tab*@
+    <div class="row">
+        <h4 class="col-sm-12 well" data-toggle="collapse" data-target="#criteria">改变地址和搜索条件</h4>
+        <div class="col-sm-12  well" id="criteria" class="collapse">
 
-                        <form class="form-horizontal mini" style="margin-bottom: 0px;">
-                            <fieldset>
+            <form class="form-horizontal mini" style="margin-bottom: 0px;">
+                <fieldset>
 
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">地址</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Where do you want to live?">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">地区</label>
-                                    <div class="col-sm-9">
-                                        <select id="region" name="region" class="form-control col-sm-12">
-                                            <option>全部地区</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">区域</label>
-                                    <div class="col-sm-9">
-                                        <select id="district" class="form-control col-sm-12">
-                                            <option>全部区域</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">街区</label>
-                                    <div class="col-sm-9">
-                                        <select id="suburb" class="form-control col-sm-12">
-                                            <option>全部街区</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">卧室</label>
-                                    <div class="col-sm-9">
-                                        <select class="form-control col-sm-12">
-                                            <option value="0">数量</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5+</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">浴室</label>
-                                    <div class="col-sm-9">
-                                        <select class="form-control col-sm-12">
-                                            <option value="0">Any</option>
-                                            <option value="1">1+</option>
-                                            <option value="2">2+</option>
-                                            <option value="3">3+</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                @*                    price*@
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">价格</label>
-                                    <div class="col-sm-9">
-                                        <div class="col-sm-6 col-xs-6 no_padding_left no_margin_right">
-                                            <select class="form-control col-sm-12">
-                                                <option selected="selected" value="">最低</option>
-                                                <option value="0">$0</option>
-                                                <option value="75">$75</option>
-                                                <option value="100">$100</option>
-                                                <option value="125">$125</option>
-                                                <option value="150">$150</option>
-                                                <option value="175">$175</option>
-                                                <option value="200">$200</option>
-                                                <option value="225">$225</option>
-                                                <option value="250">$250</option>
-                                                <option value="275">$275</option>
-                                                <option value="300">$300</option>
-                                                <option value="350">$350</option>
-                                                <option value="400">$400</option>
-                                                <option value="450">$450</option>
-                                                <option value="500">$500</option>
-                                                <option value="600">$600</option>
-                                                <option value="700">$700</option>
-                                                <option value="800">$800</option>
-                                                <option value="900">$900</option>
-                                                <option value="1000">$1,000</option>
-                                                <option value="1250">$1,250</option>
-                                                <option value="1500">$1,500</option>
-                                                <option value="1750">$1,750</option>
-                                                <option value="2000">$2,000</option>
-                                                <option value="2500">$2,500</option>
-                                            </select>
-                                        </div>
-                                        至
-                                        <div class="col-sm-6 col-xs-6  no_padding_right pull-right">
-                                            <select class="form-control col-sm-12 ">
-                                                <option selected="selected" value="">最高</option>
-                                                <option value="75">$75</option>
-                                                <option value="100">$100</option>
-                                                <option value="125">$125</option>
-                                                <option value="150">$150</option>
-                                                <option value="175">$175</option>
-                                                <option value="200">$200</option>
-                                                <option value="225">$225</option>
-                                                <option value="250">$250</option>
-                                                <option value="275">$275</option>
-                                                <option value="300">$300</option>
-                                                <option value="350">$350</option>
-                                                <option value="400">$400</option>
-                                                <option value="450">$450</option>
-                                                <option value="500">$500</option>
-                                                <option value="600">$600</option>
-                                                <option value="700">$700</option>
-                                                <option value="800">$800</option>
-                                                <option value="900">$900</option>
-                                                <option value="1000">$1,000</option>
-                                                <option value="1250">$1,250</option>
-                                                <option value="1500">$1,500</option>
-                                                <option value="1750">$1,750</option>
-                                                <option value="2000">$2,000</option>
-                                                <option value="2500">$2,500</option>
-                                                <option value="999999999" selected="selected">$2,500+</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                @*                    Search button*@
-                                <div class="row">
-                                    <div class="col-sm-2 pull-right" style="margin-top: 10px;">
-                                        <button class="btn btn-primary pull-right" type="submit">Search</button>
-
-                                    </div>
-                                </div>
-
-
-                            </fieldset>
-                        </form>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">地址</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="想住在哪里?">
+                        </div>
                     </div>
-                </div>
 
-                @*     left middle tab*@
-                <div class="row ">
-                    <h4 class="col-sm-12 well" data-toggle="collapse" data-target="#filters">Filters</h4>
-                    <div class="col-sm-12 well" id="filters" class="collapse">
-
-                        <h4>Property type:</h4>
-                        <ul class="nav">
-                            <li>
-                                <a class="active" href="category.html">Houses (12)</a>
-                                <ul>
-                                    <li><a href="listings.html"> - Detached houses (11)</a></li>
-                                    <li><a class="active" href="listings.html"> - Semi-detached houses (1)</a></li>
-                                    <li><a class="active" href="listings.html"> - Terraced houses (1)</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="category.html">Bungalows (5)</a></li>
-                            <li><a href="category.html">Land (2)</a></li>
-                        </ul>
-                        <h4>Preowned & new homes:</h4>
-                        <ul class="nav">
-                            <li><a href="category.html">Pre-owned homes (5)</a></li>
-                            <li><a href="category.html">Brand new homes (2)</a></li>
-                        </ul>
-                        <h4>Outside space:</h4>
-                        <ul class="nav">
-                            <li><a href="category.html">Garden (5)</a></li>
-                            <li><a href="category.html">Parking (2)</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                @*        left down tab*@
-                <div class="row">
-                    <h4 class="col-sm-12 well" data-toggle="collapse" data-target="#location">Location</h4>
-                    <div class="col-sm-12  well" id="location" class="collapse">
-
-                        <ul class="nav">
-                            <li><a href="category.html">Scotland</a></li>
-                            <li><a href="category.html">Wales</a></li>
-                            <li><a href="category.html">Northern Ireland</a></li>
-                            <li><a href="category.html">Birmingham</a></li>
-                            <li><a href="category.html">Leeds</a></li>
-                            <li><a href="category.html">Glasgow</a></li>
-                            <li><a href="category.html">Sheffield</a></li>
-                            <li><a href="category.html">Bradford</a></li>
-                            <li><a href="category.html">Edinburgh</a></li>
-                            <li><a href="category.html">Liverpool</a></li>
-                            <li><a href="category.html">Manchester</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-
-                <div class="row hidden-xs">
-                    <h4 class="col-sm-12 well">Popular searches</h4>
-                    <div class="col-sm-12  well">
-
-                        <ul class="nav">
-                            <li><a href="category.html">Property for sale in London</a></li>
-                            <li><a href="category.html">Houses for sale in London</a></li>
-                            <li><a href="category.html">2 bedroom houses for sale in London</a></li>
-                            <li><a href="category.html">3 bedroom houses for sale in London</a></li>
-                            <li><a href="category.html">4 bedroom houses for sale in London</a></li>
-                            <li><a href="category.html">5+ bedroom houses for sale in London</a></li>
-                            <li><a href="category.html">Flats for sale in London</a></li>
-                            <li><a href="category.html">Studio flats for sale in London</a></li>
-                            <li><a href="category.html">1 bedroom flats for sale in London</a></li>
-                            <li><a href="category.html">2 bedroom flats for sale in London</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-sm-8">
-            @*        map*@
-            <script>
-                var map_locations = [
-                    {
-                        "lat": 51.461311,
-                        "lng": -0.303742,
-                        "title": "7 bedroom house",
-                        "street": "The Vineyard, Richmond, TW10",
-                        "price": "3,350,000"
-                    }, {
-                        "lat": 51.451311,
-                        "lng": -0.313742,
-                        "title": "1 bedroom flat",
-                        "street": "Lower Mortlake Road, North Sheen",
-                        "price": "229,950"
-                    }, {
-                        "lat": 51.462311,
-                        "lng": -0.323742,
-                        "title": "2 bedroom apartment",
-                        "street": "Mount Ararat Road, Richmond",
-                        "price": "520,000"
-                    }, {
-                        "lat": 51.443821,
-                        "lng": -0.300747,
-                        "title": "2 bedroom house",
-                        "street": "The Shakespeare",
-                        "price": "550,000"
-                    },
-                    {
-                        "lat": 51.452212,
-                        "lng": -0.298291,
-                        "title": "3 bedroom terraced house",
-                        "street": "London, TW9",
-                        "price":
-                            "615,000"
-                    }, {
-                        "lat": 51.466506,
-                        "lng": -0.294333,
-                        "title": "3 bedroom semi-detached house",
-                        "street": "Beaumont Avenue, Richmond",
-                        "price": "1,100,000"
-                    }, {
-                        "lat": 51.462213,
-                        "lng": -0.293045,
-                        "title": "2 bedroom flat",
-                        "street": "The Lodge, Courtlands, Sheen Road, Richmond",
-                        "price": "399,950"
-                    }, {
-                        "lat": 51.462161,
-                        "lng": -0.292494,
-                        "title": "1 bedroom flat",
-                        "street": "Sheen Road, Richmond, TW9",
-                        "price": "219,950"
-                    }, {
-                        "lat": 51.47357,
-                        "lng": -0.281727,
-                        "title": "5 bedroom flat",
-                        "street": "Chelwood Gardens",
-                        "price": "1,250,000"
-                    },
-                    {
-                        "lat": 51.466213,
-                        "lng": -0.293998,
-                        "title": "4 bedroom house",
-                        "street": "Lower Mortlake Road, Richmond, TW9",
-                        "price": "435,000"
-                    }
-                ]
-            </script>
-            <div id="map_canvas"></div><br />
-
-
-            <div class="row">
-                <div class="col-sm-4 col-xs-12 select_height"> Showing 1 - 16 of 255 results</div>
-                <div class="pull-right col-sm-6 col-xs-12">
-                    <div class="row">
-                        <div class="col-xs-6 visible-xs">Sort by : </div>
-                        <div class="pull-right col-sm-6 col-xs-6">
-                            <select id="sort" name="sort" class="form-control col-sm-3">
-                                <option value="pmrank">Popularity</option>
-                                <option value="price">Price: Low to High</option>
-                                <option value="-price">Price: High to Low</option>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">地区</label>
+                        <div class="col-sm-9">
+                            <select id="region" name="region" class="form-control col-sm-12">
+                                <option>全部地区</option>
                             </select>
                         </div>
-                        <span class="col-sm-3 col-xs-12 hidden-xs pull-right" style="text-align: right;">Sort by : </span>
                     </div>
-                </div>
-            </div>
 
-            <br class="visible-xs" />
-            <br class="visible-xs" />
-
-            @*        grid view of properties*@
-            <div class="row">
-                @foreach (var item in Model)
-                {
-                    <div class="col-sm-3 col-xs-6 mini_property_wrapper">
-                        <div class="thumbnail mini_property">
-                            <a href="property.html" class="img_holder"><img src='@Url.Content(item.firstImgName)' alt=""></a>
-                            <h5>Price : $@Html.DisplayFor(modelItem => item.weeklyPrice) per week</h5>
-                            <p>
-                                <a href="property.html">@Html.DisplayFor(modelItem => item.bedroomCount) bedroom</a><br />
-                                @Html.DisplayFor(modelItem => item.address)
-                            </p>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">区域</label>
+                        <div class="col-sm-9">
+                            <select id="district" class="form-control col-sm-12">
+                                <option>全部区域</option>
+                            </select>
                         </div>
                     </div>
-                }
-            </div>
-            <div class="row">
-                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 
-            </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">街区</label>
+                        <div class="col-sm-9">
+                            <select id="suburb" class="form-control col-sm-12">
+                                <option>全部街区</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">卧室</label>
+                        <div class="col-sm-9">
+                            <select id="bedroom" class="form-control col-sm-12">
+                                <option value="0">数量</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">浴室</label>
+                        <div class="col-sm-9">
+                            <select id="bathroom" class="form-control col-sm-12">
+                                <option value="0">数量</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    @*                    price*@
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">价格</label>
+                        <div class="col-sm-9">
+                            <div class="col-sm-6 col-xs-6 no_padding_left no_margin_right">
+                                <select class="form-control col-sm-12">
+                                    <option selected="selected" value="">最低</option>
+                                    <option value="0">$0</option>
+                                    <option value="75">$75</option>
+                                    <option value="100">$100</option>
+                                    <option value="125">$125</option>
+                                    <option value="150">$150</option>
+                                    <option value="175">$175</option>
+                                    <option value="200">$200</option>
+                                    <option value="225">$225</option>
+                                    <option value="250">$250</option>
+                                    <option value="275">$275</option>
+                                    <option value="300">$300</option>
+                                    <option value="350">$350</option>
+                                    <option value="400">$400</option>
+                                    <option value="450">$450</option>
+                                    <option value="500">$500</option>
+                                    <option value="600">$600</option>
+                                    <option value="700">$700</option>
+                                    <option value="800">$800</option>
+                                    <option value="900">$900</option>
+                                    <option value="1000">$1,000</option>
+                                    <option value="1250">$1,250</option>
+                                    <option value="1500">$1,500</option>
+                                    <option value="1750">$1,750</option>
+                                    <option value="2000">$2,000</option>
+                                    <option value="2500">$2,500</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-6  no_padding_right pull-right">
+                                <select id="max" class="form-control col-sm-12 ">
+                                    <option selected="selected" value="">最高</option>
+                                    <option value="75">$75</option>
+                                    <option value="100">$100</option>
+                                    <option value="125">$125</option>
+                                    <option value="150">$150</option>
+                                    <option value="175">$175</option>
+                                    <option value="200">$200</option>
+                                    <option value="225">$225</option>
+                                    <option value="250">$250</option>
+                                    <option value="275">$275</option>
+                                    <option value="300">$300</option>
+                                    <option value="350">$350</option>
+                                    <option value="400">$400</option>
+                                    <option value="450">$450</option>
+                                    <option value="500">$500</option>
+                                    <option value="600">$600</option>
+                                    <option value="700">$700</option>
+                                    <option value="800">$800</option>
+                                    <option value="900">$900</option>
+                                    <option value="1000">$1,000</option>
+                                    <option value="1250">$1,250</option>
+                                    <option value="1500">$1,500</option>
+                                    <option value="1750">$1,750</option>
+                                    <option value="2000">$2,000</option>
+                                    <option value="2500">$2,500</option>
+                                    <option value="999999999">$2,500+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*                    Search button*@
+                    <div class="row">
+                        <div class="col-sm-2 pull-right" style="margin-top: 10px;">
+                            <button id="search" class="btn btn-primary pull-right" type="submit">搜索</button>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    @*     left middle tab*@
+    <div class="row ">
+        <h4 class="col-sm-12 well" data-toggle="collapse" data-target="#filters">Filters</h4>
+        <div class="col-sm-12 well" id="filters" class="collapse">
+
+            <h4>Property type:</h4>
+            <ul class="nav">
+                <li>
+                    <a class="active" href="category.html">Houses (12)</a>
+                    <ul>
+                        <li><a href="listings.html"> - Detached houses (11)</a></li>
+                        <li><a class="active" href="listings.html"> - Semi-detached houses (1)</a></li>
+                        <li><a class="active" href="listings.html"> - Terraced houses (1)</a></li>
+                    </ul>
+                </li>
+                <li><a href="category.html">Bungalows (5)</a></li>
+                <li><a href="category.html">Land (2)</a></li>
+            </ul>
+            <h4>Preowned & new homes:</h4>
+            <ul class="nav">
+                <li><a href="category.html">Pre-owned homes (5)</a></li>
+                <li><a href="category.html">Brand new homes (2)</a></li>
+            </ul>
+            <h4>Outside space:</h4>
+            <ul class="nav">
+                <li><a href="category.html">Garden (5)</a></li>
+                <li><a href="category.html">Parking (2)</a></li>
+            </ul>
 
         </div>
     </div>
 
+    @*        left down tab*@
+    <div class="row">
+        <h4 class="col-sm-12 well" data-toggle="collapse" data-target="#location">Location</h4>
+        <div class="col-sm-12  well" id="location" class="collapse">
+
+            <ul class="nav">
+                <li><a href="category.html">Scotland</a></li>
+                <li><a href="category.html">Wales</a></li>
+                <li><a href="category.html">Northern Ireland</a></li>
+                <li><a href="category.html">Birmingham</a></li>
+                <li><a href="category.html">Leeds</a></li>
+                <li><a href="category.html">Glasgow</a></li>
+                <li><a href="category.html">Sheffield</a></li>
+                <li><a href="category.html">Bradford</a></li>
+                <li><a href="category.html">Edinburgh</a></li>
+                <li><a href="category.html">Liverpool</a></li>
+                <li><a href="category.html">Manchester</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="row hidden-xs">
+        <h4 class="col-sm-12 well">Popular searches</h4>
+        <div class="col-sm-12  well">
+
+            <ul class="nav">
+                <li><a href="category.html">Property for sale in London</a></li>
+                <li><a href="category.html">Houses for sale in London</a></li>
+                <li><a href="category.html">2 bedroom houses for sale in London</a></li>
+                <li><a href="category.html">3 bedroom houses for sale in London</a></li>
+                <li><a href="category.html">4 bedroom houses for sale in London</a></li>
+                <li><a href="category.html">5+ bedroom houses for sale in London</a></li>
+                <li><a href="category.html">Flats for sale in London</a></li>
+                <li><a href="category.html">Studio flats for sale in London</a></li>
+                <li><a href="category.html">1 bedroom flats for sale in London</a></li>
+                <li><a href="category.html">2 bedroom flats for sale in London</a></li>
+            </ul>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="col-sm-8">
+        @*        map*@
+        <script>
+            var map_locations = [
+                {
+                    "lat": 51.461311,
+                    "lng": -0.303742,
+                    "title": "7 bedroom house",
+                    "street": "The Vineyard, Richmond, TW10",
+                    "price": "3,350,000"
+                }, {
+                    "lat": 51.451311,
+                    "lng": -0.313742,
+                    "title": "1 bedroom flat",
+                    "street": "Lower Mortlake Road, North Sheen",
+                    "price": "229,950"
+                }, {
+                    "lat": 51.462311,
+                    "lng": -0.323742,
+                    "title": "2 bedroom apartment",
+                    "street": "Mount Ararat Road, Richmond",
+                    "price": "520,000"
+                }, {
+                    "lat": 51.443821,
+                    "lng": -0.300747,
+                    "title": "2 bedroom house",
+                    "street": "The Shakespeare",
+                    "price": "550,000"
+                },
+                {
+                    "lat": 51.452212,
+                    "lng": -0.298291,
+                    "title": "3 bedroom terraced house",
+                    "street": "London, TW9",
+                    "price":
+                        "615,000"
+                }, {
+                    "lat": 51.466506,
+                    "lng": -0.294333,
+                    "title": "3 bedroom semi-detached house",
+                    "street": "Beaumont Avenue, Richmond",
+                    "price": "1,100,000"
+                }, {
+                    "lat": 51.462213,
+                    "lng": -0.293045,
+                    "title": "2 bedroom flat",
+                    "street": "The Lodge, Courtlands, Sheen Road, Richmond",
+                    "price": "399,950"
+                }, {
+                    "lat": 51.462161,
+                    "lng": -0.292494,
+                    "title": "1 bedroom flat",
+                    "street": "Sheen Road, Richmond, TW9",
+                    "price": "219,950"
+                }, {
+                    "lat": 51.47357,
+                    "lng": -0.281727,
+                    "title": "5 bedroom flat",
+                    "street": "Chelwood Gardens",
+                    "price": "1,250,000"
+                },
+                {
+                    "lat": 51.466213,
+                    "lng": -0.293998,
+                    "title": "4 bedroom house",
+                    "street": "Lower Mortlake Road, Richmond, TW9",
+                    "price": "435,000"
+                }
+            ]
+        </script>
+        <div id="map_canvas"></div><br/>
+
+
+        <div class="row">
+            <div class="col-sm-4 col-xs-12 select_height"> Showing 1 - 16 of 255 results</div>
+            <div class="pull-right col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-xs-6 visible-xs">Sort by : </div>
+                    <div class="pull-right col-sm-6 col-xs-6">
+                        <select id="sort" name="sort" class="form-control col-sm-3">
+                            <option value="pmrank">Popularity</option>
+                            <option value="price">Price: Low to High</option>
+                            <option value="-price">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <span class="col-sm-3 col-xs-12 hidden-xs pull-right" style="text-align: right;">Sort by : </span>
+                </div>
+            </div>
+        </div>
+
+        <br class="visible-xs"/>
+        <br class="visible-xs"/>
+
+        @*        grid view of properties*@
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-3 col-xs-6 mini_property_wrapper">
+                    <div class="thumbnail mini_property">
+                        <a href="property.html" class="img_holder"><img src='@Url.Content(item.firstImgName)' alt=""></a>
+                        <h5>Price : $@Html.DisplayFor(modelItem => item.weeklyPrice) per week</h5>
+                        <p>
+                            <a href="property.html">@Html.DisplayFor(modelItem => item.bedroomCount) bedroom</a><br/>
+                            @Html.DisplayFor(modelItem => item.address)
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new {page}))
+
+        </div>
+
+    </div>
+    </div>
+
     <script>
-        $(function () {
+        $(function() {
 
             //get region when load page
             $('#region').not(':first').remove();
-            $.each(regions, function (key, value) {
-                debugger;
-                $('#region')
-                    .append($("<option></option>")
-                        .attr("value", key)
-                        .text(value));
-            });
+            $.each(regions,
+                function(key, value) {
+                    debugger;
+                    $('#region')
+                        .append($("<option></option>")
+                            .attr("value", key)
+                            .text(value));
+                });
 
             //pop up districts
-            $('#region').change(function () {
+            $('#region').change(function() {
                 var region = $('#region option:selected').text();
                 var districts = regions_district_dic[region];
                 $('#district option').not(':first').remove();
-                $.each(districts, function (key, value) {
-                    $('#district')
-                        .append($("<option></option>")
-                            .attr("value", key)
-                            .text(value));
-                });
+                $.each(districts,
+                    function(key, value) {
+                        $('#district')
+                            .append($("<option></option>")
+                                .attr("value", key)
+                                .text(value));
+                    });
             });
 
             //pop up suburbs
-            $('#district').change(function () {
+            $('#district').change(function() {
                 var distrct = $('#district option:selected').text();
                 var suburbs = district_suburb_dic[distrct];
                 $('#suburb option').not(':first').remove();
-                $.each(suburbs, function (key, value) {
-                    $('#suburb')
-                        .append($("<option></option>")
-                            .attr("value", key)
-                            .text(value));
-                });
+                $.each(suburbs,
+                    function(key, value) {
+                        $('#suburb')
+                            .append($("<option></option>")
+                                .attr("value", key)
+                                .text(value));
+                    });
             });
+
+        var model={}
+//            $('#search').click(function() {
+//                
+//            });
 
         });
     </script>
